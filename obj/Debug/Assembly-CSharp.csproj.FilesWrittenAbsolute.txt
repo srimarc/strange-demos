@@ -1,0 +1,10 @@
+/Users/3mo/good_bad_strange/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/3mo/good_bad_strange/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/3mo/good_bad_strange/obj/Debug/Assembly-CSharp.dll
+/Users/3mo/good_bad_strange/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/3mo/good_bad_strange/Temp/bin/Debug/UnityEngine.dll
+/Users/3mo/good_bad_strange/Temp/bin/Debug/UnityEditor.dll
+/Users/3mo/good_bad_strange/Temp/bin/Debug/Mono.Cecil.dll
+/Users/3mo/good_bad_strange/Temp/bin/Debug/nunit.framework.dll
+/Users/3mo/good_bad_strange/Temp/bin/Debug/Unity.DataContract.dll
+/Users/3mo/good_bad_strange/Temp/bin/Debug/ICSharpCode.NRefactory.dll

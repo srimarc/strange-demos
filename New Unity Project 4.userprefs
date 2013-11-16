@@ -1,0 +1,71 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/StrangeLoop.cs">
+    <Files>
+      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/myfirstproject/MyFirstProjectRoot.cs" Line="60" Column="3" />
+      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/myfirstproject/service/ExampleService.cs" Line="32" Column="58" />
+      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/signalsproject/SignalsRoot.cs" Line="11" Column="2" />
+      <File FileName="Assets/StrangeIoC/scripts/strange/extensions/injector/impl/InjectionBinding.cs" Line="32" Column="15" />
+      <File FileName="Assets/StrangeLoop.cs" Line="54" Column="57" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="StrangeIoC" expanded="True">
+                <Node name="examples" expanded="True">
+                  <Node name="Assets" expanded="True">
+                    <Node name="scripts" expanded="True">
+                      <Node name="myfirstproject" expanded="True">
+                        <Node name="service" expanded="True" />
+                      </Node>
+                      <Node name="signalsproject" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
+                <Node name="scripts" expanded="True">
+                  <Node name="strange" expanded="True">
+                    <Node name="extensions" expanded="True">
+                      <Node name="context" expanded="True">
+                        <Node name="impl" expanded="True" />
+                      </Node>
+                      <Node name="injector" expanded="True">
+                        <Node name="impl" expanded="True" />
+                      </Node>
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="StrangeLoop.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>this.avatars[0]</Value>
+        </State>
+      </Pad>
+      <Pad Id="ConnectionManagerPad">
+        <State selected="True" />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../Documents/repos/zombies 4/unityprojects/zombies/Assets/scripts/ui/TouchManager.cs" line="62" offsetX="237" offsetY="915" expression="activeBlockCodes" liveUpdate="False" />
+    <Watch file="../Documents/repos/zombies 4/unityprojects/zombies/Assets/scripts/zombies/sceneLogicFlows/AvatarCustomizerView.cs" line="175" offsetX="189" offsetY="2139" expression="textMeshGO" liveUpdate="False" />
+    <Watch file="../Documents/repos/zombies 4/unityprojects/zombies/Assets/scripts/zombies/sceneLogicFlows/SkitUIView.cs" line="315" offsetX="158" offsetY="4710" expression="state" liveUpdate="True" />
+    <Watch file="../Documents/repos/zombies 4/unityprojects/zombies/Assets/scripts/zombies/minigame/ui/AchievementScreen.cs" line="160" offsetX="125" offsetY="2385" expression="animParent" liveUpdate="False" />
+    <Watch file="../Documents/repos/zombies 4/unityprojects/zombies/Assets/scripts/zombies/minigame/ui/AchievementScreen.cs" line="160" offsetX="125" offsetY="2385" expression="animParent" liveUpdate="True" />
+    <Watch file="../Documents/repos/zombies 4/unityprojects/zombies/Assets/scripts/zombies/minigame/TileManager.cs" line="306" offsetX="114" offsetY="4270" expression="proplessTiles" liveUpdate="False" />
+    <Watch file="../New Unity Project/Assets/StrangeIoC/scripts/strange/framework/impl/Binder.cs" line="111" offsetX="181" offsetY="1650" expression="dict" liveUpdate="True" />
+    <Watch file="../New Unity Project/Assets/StrangeIoC/scripts/strange/framework/impl/Binder.cs" line="111" offsetX="572" offsetY="1543" expression="dict" liveUpdate="True" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+</Properties>
