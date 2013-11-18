@@ -4,7 +4,7 @@ using System.Collections;
 public class InputControl : MonoBehaviour 
 {
 
-	private int index = 0;
+	public int index = 0;
 	private float currentPos = 0f;
 	private float destination = 0f;
 	private bool changeQueued = false;
@@ -56,10 +56,15 @@ public class InputControl : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-		void FixedUpdate () 
+	void Update ()
 	{
 		bool advance = Input.GetKeyDown (KeyCode.RightArrow) || Input.GetKeyDown (KeyCode.DownArrow);
 		bool backup = Input.GetKeyDown (KeyCode.LeftArrow) || Input.GetKeyDown (KeyCode.UpArrow);
+
+		bool toggle = Input.GetKeyDown (KeyCode.Q);
+
+		//bool advance = Input.GetAxis ("horizontal") > 0;
+		//bool backup = Input.GetAxis ("horizontal") > 0;
 
 		int newIndex = index;
 
@@ -77,6 +82,12 @@ public class InputControl : MonoBehaviour
 
 		index = newIndex;
 
+		if (toggle)
+			edx_Slide.SetActive (!edx_Slide.activeSelf);
+	}
+
+	void FixedUpdate()
+	{
 		animate ();
 	}
 
