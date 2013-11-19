@@ -21,6 +21,8 @@ using strange.extensions.context.api;
 using strange.extensions.context.impl;
 using strange.extensions.dispatcher.eventdispatcher.api;
 using strange.extensions.dispatcher.eventdispatcher.impl;
+using strange.examples.service.social;
+using strange.examples.service.gameStore;
 
 namespace strange.examples.myfirstproject
 {
@@ -38,23 +40,109 @@ namespace strange.examples.myfirstproject
 		
 		protected override void mapBindings()
 		{
-			//Injection binding.
-			//Map a mock model and a mock service, both as Singletons
-			injectionBinder.Bind<IExampleModel>().To<ExampleModel>().ToSingleton();
-			injectionBinder.Bind<IExampleService>().To<ExampleService>().ToSingleton();
+			// EXAMPLE: MAPPING A SERVICE THAT MIGHT CHANGE.
+			//We wrap the particular SDK inside an Adapter that suits OUR needs.
 
-			//View/Mediator binding
+			injectionBinder.Bind<ISocialService>().To<FacebookService>().ToSingleton();
+
+			//Our service can be bound to a different service (Like Google+)
+			//injectionBinder.Bind<ISocialService>().To<GooglePlusService>().ToSingleton();
+
+			//Or we can name the services and bind more than one
+			//injectionBinder.Bind<ISocialService>().To<FacebookService>()
+								//.ToSingleton()
+								//.ToName(SocialServices.FACEBOOK);
+			//injectionBinder.Bind<ISocialService>().To<GooglePlusService>()
+								//.ToSingleton()
+								//.ToName(SocialServices.GOOGLE_PLUS);
+
+			//Or we can wrap it all into a master service
+			//injectionBinder.Bind<ISocialService>().Bind<IMultiService>()
+								//.To<MultiSocialService>().ToSingleton();
+
+
+
+
+
+
+
+			// EXAMPLE: MAPPING A SERVICE YOU MIGHT WANT TO CUSTOMIZE
+
+#if UNITY_EDITOR || UNITY_WEBPLAYER
+			injectionBinder.Bind<IGameStore>().To<FakeGameStore>().ToSingleton();
+#elif UNITY_IPHONE
+			injectionBinder.Bind<IGameStore>().To<IosAppStore>().ToSingleton();
+#elif UNITY_XBOX360
+			injectionBinder.Bind<IGameStore>().To<XboxAppStore>().ToSingleton();
+#endif
+
+
+
+
+
+
+
+			// EXAMPLE: MAPPING A KNOWN QUANTITY
+			//You know exactly the value you want to map
+
+			injectionBinder.Bind<ISetupConfig> ().ToValue (SetupConfig.DEFAULTS);
+
+
+
+
+
+
+
+
+			// EXAMPLE: FACTORY MAPPING
+			//You want to create as many of these things as are ever asked for...
+
+			injectionBinder.Bind<IEnemy> ().To<Borg> ();
+
+
+
+
+
+
+			// EXAMPLE: USING ABSTRACT/PARENT CLASSESES
+			//Sometimes an interface isn't convenient/possible
+
+			injectionBinder.Bind<LevelModel> ().To<LevelOneModel> ();
+
+
+
+			//Oh, and you can alter bindings on-the-fly
+			injectionBinder.Unbind<LevelModel> ();
+			injectionBinder.Bind<LevelModel> ().To<LevelTwoModel> ();
+
+
+
+
+
+			// EVENT/COMMAND BINDING
+			//For communication around the app
+
+			commandBinder.Bind(ExampleEvent.REQUEST_WEB_SERVICE).To<CallWebServiceCommand>();
+
+			commandBinder.Bind(ExampleEvent.CHANGE_SOCIAL_SERVICE).To<SwitchServiceCommand>();
+
+			//The START event is fired as soon as mappings are complete.
+			//Note how we've bound it "Once". This means that the mapping goes away as soon as the command fires.
+			commandBinder.Bind(ContextEvent.START).To<StartCommand>().Once ();
+
+
+
+
+
+
+			//VIEW/MEDIATION BINDING
+
 			//This Binding instantiates a new ExampleMediator whenever as ExampleView
 			//Fires its Awake method. The Mediator communicates to/from the View
 			//and to/from the App. This keeps dependencies between the view and the app
 			//separated.
 			mediationBinder.Bind<ExampleView>().To<ExampleMediator>();
-			
-			//Event/Command binding
-			commandBinder.Bind(ExampleEvent.REQUEST_WEB_SERVICE).To<CallWebServiceCommand>();
-			//The START event is fired as soon as mappings are complete.
-			//Note how we've bound it "Once". This means that the mapping goes away as soon as the command fires.
-			commandBinder.Bind(ContextEvent.START).To<StartCommand>().Once ();
+
 
 		}
 	}

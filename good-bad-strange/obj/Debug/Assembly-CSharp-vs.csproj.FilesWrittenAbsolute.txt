@@ -1,0 +1,10 @@
+/Users/marc/Documents/repos/strange-demos/good-bad-strange/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/marc/Documents/repos/strange-demos/good-bad-strange/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/marc/Documents/repos/strange-demos/good-bad-strange/obj/Debug/Assembly-CSharp.dll
+/Users/marc/Documents/repos/strange-demos/good-bad-strange/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/marc/Documents/repos/strange-demos/good-bad-strange/Temp/bin/Debug/UnityEngine.dll
+/Users/marc/Documents/repos/strange-demos/good-bad-strange/Temp/bin/Debug/UnityEditor.dll
+/Users/marc/Documents/repos/strange-demos/good-bad-strange/Temp/bin/Debug/Mono.Cecil.dll
+/Users/marc/Documents/repos/strange-demos/good-bad-strange/Temp/bin/Debug/nunit.framework.dll
+/Users/marc/Documents/repos/strange-demos/good-bad-strange/Temp/bin/Debug/Unity.DataContract.dll
+/Users/marc/Documents/repos/strange-demos/good-bad-strange/Temp/bin/Debug/ICSharpCode.NRefactory.dll
