@@ -99,6 +99,7 @@ namespace strange.examples.myfirstproject
 			//You want to create as many of these things as are ever asked for...
 
 			injectionBinder.Bind<IEnemy> ().To<Borg> ();
+			injectionBinder.Bind<IFeedData> ().To<FeedData> ();
 
 
 
@@ -130,10 +131,10 @@ namespace strange.examples.myfirstproject
 			// EVENT/COMMAND BINDING
 			//For communication around the app
 
-			commandBinder.Bind(ExampleEvent.REQUEST_WEB_SERVICE).To<CallWebServiceCommand>();
-
 			commandBinder.Bind(ExampleEvent.CHANGE_SOCIAL_SERVICE).To<SwitchServiceCommand>();
+			commandBinder.Bind(ExampleEvent.POST_TO_FEED).To<PostToFeedCommand>();
 
+			commandBinder.Bind(ExampleEvent.REQUEST_WEB_SERVICE).To<CallWebServiceCommand>();
 			//The START event is fired as soon as mappings are complete.
 			//Note how we've bound it "Once". This means that the mapping goes away as soon as the command fires.
 			commandBinder.Bind(ContextEvent.START).To<StartCommand>().Once ();

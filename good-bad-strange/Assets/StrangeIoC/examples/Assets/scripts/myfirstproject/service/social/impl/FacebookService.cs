@@ -38,7 +38,7 @@ namespace strange.examples.service.social
 			}
 		}
 
-		public void PostToFeed (FeedData data)
+		public void PostToFeed (IFeedData data)
 		{
 			//work here with the Facebook SDK to post to the timeline.
 		}

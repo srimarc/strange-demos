@@ -6,7 +6,7 @@ namespace strange.examples.service.social
 	{
 		string name{ get; }
 
-		void PostToFeed(FeedData data);
+		void PostToFeed(IFeedData data);
 
 		void FetchCurrentUser();
 
