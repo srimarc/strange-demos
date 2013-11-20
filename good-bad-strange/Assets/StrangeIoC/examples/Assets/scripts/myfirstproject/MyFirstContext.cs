@@ -23,6 +23,7 @@ using strange.extensions.dispatcher.eventdispatcher.api;
 using strange.extensions.dispatcher.eventdispatcher.impl;
 using strange.examples.service.social;
 using strange.examples.service.gameStore;
+using strange.examples.service;
 
 namespace strange.examples.myfirstproject
 {
@@ -114,6 +115,13 @@ namespace strange.examples.myfirstproject
 			//Oh, and you can alter bindings on-the-fly
 			injectionBinder.Unbind<LevelModel> ();
 			injectionBinder.Bind<LevelModel> ().To<LevelTwoModel> ();
+
+
+
+
+			// EXAMPLE: WRAPPING A MONOBEHAVIOUR
+			//Why do this? Because we want to minimize dependencies...even on Unity!
+			injectionBinder.Bind<IWebService> ().To<NetworkViewWebService> ();
 
 
 

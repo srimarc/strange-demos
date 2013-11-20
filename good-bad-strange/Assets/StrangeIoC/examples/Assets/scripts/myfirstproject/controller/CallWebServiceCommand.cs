@@ -10,6 +10,7 @@ using UnityEngine;
 using strange.extensions.context.api;
 using strange.extensions.command.impl;
 using strange.extensions.dispatcher.eventdispatcher.api;
+using strange.examples.service;
 
 namespace strange.examples.myfirstproject
 {
@@ -20,7 +21,7 @@ namespace strange.examples.myfirstproject
 		public IExampleModel model{get;set;}
 		
 		[Inject]
-		public IExampleService service{get;set;}
+		public IWebService service{get;set;}
 		
 		static int counter = 0;
 		
