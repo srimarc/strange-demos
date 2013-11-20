@@ -133,6 +133,7 @@ namespace strange.examples.myfirstproject
 
 			commandBinder.Bind(ExampleEvent.CHANGE_SOCIAL_SERVICE).To<SwitchServiceCommand>();
 			commandBinder.Bind(ExampleEvent.POST_TO_FEED).To<PostToFeedCommand>();
+			commandBinder.Bind(GameStoreEvent.PURCHASE_EVENT).To<PurchaseLevelCommand>();
 
 			commandBinder.Bind(ExampleEvent.REQUEST_WEB_SERVICE).To<CallWebServiceCommand>();
 			//The START event is fired as soon as mappings are complete.
