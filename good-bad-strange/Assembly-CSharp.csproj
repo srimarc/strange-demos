@@ -113,6 +113,8 @@
      <Compile Include="Assets\StrangeIoC\examples\Assets\scripts\myfirstproject\service\gameStore\impl\FakeGameStore.cs" />
      <Compile Include="Assets\StrangeIoC\examples\Assets\scripts\myfirstproject\service\gameStore\impl\IosAppStore.cs" />
      <Compile Include="Assets\StrangeIoC\examples\Assets\scripts\myfirstproject\service\gameStore\impl\XboxAppStore.cs" />
+     <Compile Include="Assets\StrangeIoC\examples\Assets\scripts\myfirstproject\service\server\IWebService.cs" />
+     <Compile Include="Assets\StrangeIoC\examples\Assets\scripts\myfirstproject\service\server\NetworkViewWebService.cs" />
      <Compile Include="Assets\StrangeIoC\examples\Assets\scripts\myfirstproject\service\social\api\IFeedData.cs" />
      <Compile Include="Assets\StrangeIoC\examples\Assets\scripts\myfirstproject\service\social\api\ISocialService.cs" />
      <Compile Include="Assets\StrangeIoC\examples\Assets\scripts\myfirstproject\service\social\api\SocialServices.cs" />
